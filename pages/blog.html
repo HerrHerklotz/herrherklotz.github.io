@@ -1,0 +1,15 @@
+<div layout="column" layout-padding>
+  
+  <md-card ng-repeat="item in blog track by $index">
+  <!--<md-card ng-repeat="n in [10, 11, 12,13,14,15,16] track by $index">-->
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{item.title}}</span>
+        <span class="md-subhead">HerrHerklotz, {{item.time}} {{item.date}}</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+      {{item.content}}
+    </md-card-content>
+  </md-card>
+</div>
