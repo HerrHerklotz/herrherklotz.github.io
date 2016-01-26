@@ -20,7 +20,7 @@ class ABrainRestController {
     
     this.$http.get('https://api.github.com/repos/HerrHerklotz/aBrain-api-rest/contents/json', {})
       .then((response)=>{
-          response.data.tree.forEach((el, id)=>{
+          response.data.forEach((el, id)=>{
             this.$http.get(el.download_url, {})
             .then((response)=>{
                 self.$scope.data.push(response.data);
