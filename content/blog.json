@@ -1,14 +1,8 @@
 [
   {
-    "title": "Publication of REST API and aBrain Beta",
-    "time": "15:11",
-    "date": "21.01.2016",
-    "content": "The last days I worked on publishing the aBrain REST API to GitHub and creating the Play Store entry. aBrain is now available as closed beta! I'm looking for some interested beta tester."
-  },
-  {
-    "title": "Now it's time to ...",
+    "title": "Hello ...",
     "time": "23:10",
     "date": "18.01.2016",
-    "content": "... welcome you on my new page (I have changed from Jekyll to AngularJS.)! Next, I will publish a REST-API of my current project."
+    "content": "World!"
   }
 ]
