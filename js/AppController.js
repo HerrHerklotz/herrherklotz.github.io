@@ -18,7 +18,7 @@ class AppController {
     switch(oName) {
       case 'about':
         this.$location.url('/about');
-        this.$scope.loadedPage = 'HerrHerklotz - About';
+        this.$scope.loadedPage = 'herrherklotz - About';
       break;
       case 'abrain/api/rest':
         this.$location.url('/abrain/api/rest');
@@ -26,11 +26,11 @@ class AppController {
       break;
       case 'blog':
         this.$location.url('/blog');
-        this.$scope.loadedPage = 'HerrHerklotz - Blog';
+        this.$scope.loadedPage = 'herrherklotz - Blog';
       break;
       case 'projects':
         this.$location.url('/projects');
-        this.$scope.loadedPage = 'HerrHerklotz - Projects';
+        this.$scope.loadedPage = 'herrherklotz - Projects';
       break;
     }
     

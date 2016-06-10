@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     
-    <title>HerrHerklotz</title>
+    <title>herrherklotz - simple solutions for a better future</title>
     
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -52,7 +52,7 @@
           <md-button class="md-raised md-accent" href="https://github.com/HerrHerklotz">
             Github
           </md-button>
-          <md-button class="md-raised md-accent" ng-disabled="true" href="https://play.google.com/store?hl=en" target="_blank">
+          <md-button class="md-raised md-accent" href="https://play.google.com/store?hl=en" target="_blank">
             Play Store {{$locale.current.page}}
           </md-button>
         </div>
@@ -69,22 +69,13 @@
                 <md-icon class="material-icon">message</md-icon>
                 <p>Blog</p>
               </md-list-item>
-              <md-list-item ng-click="appCtrl.setPage('projects')" ng-disabled="true">
-                <md-icon class="material-icon">developer_board</md-icon>
-                <p>Projects</p>
-              </md-list-item>
               <md-list-item ng-click="appCtrl.setPage('about')">
                 <md-icon class="material-icon">fingerprint</md-icon>
                 <p>About</p>
               </md-list-item>
-              <md-subheader>aBrain</md-subheader>
-              <md-list-item ng-click="appCtrl.setPage('abrain/info')" ng-disabled="true">
+              <md-list-item ng-click="https://play.google.com/store/apps/details?id=com.herrherklotz.abrain">
                 <md-icon class="material-icon">info_outline</md-icon>
-                <p>Informations</p>
-              </md-list-item>
-              <md-list-item ng-click="appCtrl.setPage('abrain/api/rest')">
-                <md-icon class="material-icon">cloud</md-icon>
-                <p>REST API</p>
+                <p>aBrain</p>
               </md-list-item>
             </md-list>
           </md-sidenav>
