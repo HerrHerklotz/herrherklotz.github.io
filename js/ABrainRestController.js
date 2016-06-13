@@ -18,10 +18,11 @@ class ABrainRestController {
   loadApi() {  
     var self = this;
     
-    this.$http.get('https://api.github.com/repos/HerrHerklotz/aBrain-api-rest/contents/json', {})
+    this.$http.get('https://api.github.com/repos/HerrHerklotz/aBrain-api-REST/git/trees/master', {})
       .then((response)=>{
-          response.data.forEach((el, id)=>{
-            this.$http.get(el.download_url, {})
+          console.log(response.data.tree);
+          response.data.tree.forEach((el, id)=>{
+            this.$http.get('https://raw.githubusercontent.com/HerrHerklotz/aBrain-api-REST/master/' + el.path, {})
             .then((response)=>{
                 self.$scope.data.push(response.data);
             });
