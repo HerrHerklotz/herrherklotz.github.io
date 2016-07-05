@@ -9,13 +9,19 @@ app.config(['$mdThemingProvider', '$routeProvider', '$locationProvider',
     .accentPalette('blue');
 
     $routeProvider
-        .when('/', 
+        .when('/blog', 
         {
             templateUrl: 'blog/page.html',
             controller: 'BlogController',
             controllerAs: 'ctrl'
         })
-        .otherwise({redirectTo: '/'});
+        .when('/blog/app', 
+        {
+            templateUrl: 'blog/page.html',
+            controller: 'BlogController',
+            controllerAs: 'ctrl'
+        })
+        .otherwise({redirectTo: '/blog'});
   }
 ]);
 

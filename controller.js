@@ -7,8 +7,11 @@ class AppController {
     this.$document = $document;
     this.$scope = $scope;
     this.$location = $location;
-
-    this.setPage('/');
+    this.$scope.desktop = true;
+    if ($location.path().endsWith('app'))
+    {
+      this.$scope.desktop = false;
+    }
   }
 
   setPage(oName) {

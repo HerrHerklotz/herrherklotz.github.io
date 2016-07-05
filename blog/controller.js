@@ -2,7 +2,6 @@
 
 class BlogController {
   constructor($scope, $http) {
-    console.log("test")
     let self = this;
     this.$scope = $scope;
     this.$http = $http;

@@ -16,48 +16,27 @@
 
   </head>
   <body> 
-    <!--<md-content layout-fill>
-      <md-tabs md-border-bottom  layout-fill>
-        <md-tab label="aBrain">
-          <md-tab-body layout-padding md-scroll-y>
-            <md-card>
-              <md-card-content>
-                <h3>1. checklist</h3>
-                <p>-> connected to a WiFi?<br />
-                -> have the latest version of Chrome?</p>
-                <h3>2. getting started</h3>
-                <p>-> the most basic features will be added in the next few weeks<br />
-                -> examples<br />
-                -> questions and feedback<br /></p>
-                <h3>3. start server! (switch @ top)</h3>
-                <h3>4. make something</h3>
-              </md-card-content>
-            </md-card>
-          </md-tab-body>
-        </md-tab>
-        <md-tab label="Blog" ng-click="appCtrl.loadBlog()">
-          <md-tab-body layout-padding md-scroll-y>
-            <md-card ng-repeat="item in blog track by $index">
-              <md-card-title>
-                <md-card-title-text>
-                  <span class="md-headline">{{item.title}}</span>
-                  <span class="md-subhead">HerrHerklotz, {{item.time}} {{item.date}}</span>
-                </md-card-title-text>
-              </md-card-title>
-              <md-card-content ng-bind-html="item.content">
-              </md-card-content>
-            </md-card>
-          </md-tab-body>
-        </md-tab>
-        <md-tab label="API" ng-click="appCtrl.setPage('api')">
-          <md-tab-body layout-padding md-scroll-y>
-          </md-tab-body>
-        </md-tab>
-      </md-tabs>
-    </md-content>-->
-      <md-content id="content" ng-controller="AppController as appCtrl" md-scroll-y layout-fill>
-        <ng-view id="page" layout-padding></ng-view>
-      </md-content>
+    <div flex layout="row" ng-controller="AppController as appCtrl" layout-fill>
+      <md-sidenav ng-if="desktop" class="site-sidenav md-sidenav-left" layout="column" md-component-id="sidenav" md-is-locked-open="$mdMedia('gt-sm')">
+        <md-toolbar>
+        </md-toolbar>
+        <md-content md-scroll-y>
+        </md-content>
+      </md-sidenav>
+      <div layout="column" flex>
+        <md-toolbar ng-if="desktop" >
+          <div class="md-toolbar-tools">
+            <h2>
+              Blog
+            </h2>
+            <span flex></span>
+          </div>
+        </md-toolbar>
+        <md-content id="content" md-scroll-y layout-fill>
+          <ng-view id="page" layout-padding></ng-view>
+        </md-content>
+      </div>
+    </div>
   </body>
 
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.min.js"></script>
