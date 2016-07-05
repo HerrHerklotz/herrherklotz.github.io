@@ -1,20 +1,26 @@
 [
   {
-    "mTitle": "Beta 3 - Bluetooth",
+    "mTitle": "Beta 4 - Light Sensor and Notification LED",
     "mTime": "??:??",
-    "mDate": "??.06.2016",
+    "mDate": "05.07.2016",
+    "mText": "script:<br />+ add Sensor \"Light\" (android.getLight())<br />+ add LED (android.getLED())"
+  },
+  {
+    "mTitle": "Beta 3 - ...",
+    "mTime": "??:??",
+    "mDate": "30.06.2016",
     "mText": "enable up to 100 WebSockets (only one session per socket!)<br />"
   },
   {
-    "mTitle": "Beta 2 - ",
+    "mTitle": "Beta 2 - ...",
     "mTime": "15:11",
-    "mDate": "21.01.2016",
+    "mDate": "12.06.2016",
     "mText": "The last days I worked on publishing the aBrain REST API to GitHub and creating the Play Store entry. aBrain is now avaiable as closed beta! I'm looking for some interested beta tester."
   },
   {
     "mTitle": "Beta 1 - First public release",
     "mTime": "23:10",
-    "mDate": "18.01.2016",
+    "mDate": "09.06.2016",
     "mText": "... welcome you on my new page (I have changed from Jekyll to AngularJS.)! Next, I will publish a REST-API of my current project."
   }
 ]
