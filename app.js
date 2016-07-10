@@ -11,14 +11,26 @@ app.config(['$mdThemingProvider', '$routeProvider', '$locationProvider',
     $routeProvider
         .when('/blog', 
         {
-            templateUrl: 'blog/page.html',
+            templateUrl: 'blog/index.html',
             controller: 'BlogController',
             controllerAs: 'ctrl'
         })
         .when('/blog/app', 
         {
-            templateUrl: 'blog/page.html',
+            templateUrl: 'blog/index.html',
             controller: 'BlogController',
+            controllerAs: 'ctrl'
+        })
+        .when('/api', 
+        {
+            templateUrl: 'api/index.html',
+            controller: 'ApiController',
+            controllerAs: 'ctrl'
+        })
+        .when('/api/app', 
+        {
+            templateUrl: 'api/index.html',
+            controller: 'ApiController',
             controllerAs: 'ctrl'
         })
         .otherwise({redirectTo: '/blog'});

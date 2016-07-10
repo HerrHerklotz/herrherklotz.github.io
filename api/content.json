@@ -1,0 +1,11 @@
+{
+  "android":
+  [
+    {
+      "name": "getAccelerometer",
+      "description": "..."
+    }
+  ],
+  "script":
+  []
+}
