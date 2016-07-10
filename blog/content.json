@@ -7,30 +7,12 @@
   {
     "mTitle": "Beta 3 - Bluetooth",
     "mDate": "30.06.2016",
-    "mText": "script:<br />
-    <li>
-<ul>add Sensor \"Ambient Temperature\"</ul>
-</li>
-app:<br />
-+ direct show my blog (herrherklotz.github.io) to provide the latest news abut aBrain for you
-<br />
-editor:<br />
-+ design bugfix<br />
-
-monitor / log:<br />
-+ merge both<br />
-+ each script has now it's own log<br />
-+ you can always view the last 5 executed scripts (until you stop aBrain)"
+    "mText": "script:<br />+ add Sensor \"Ambient Temperature\"<br />app:<br />+ direct show my blog (herrherklotz.github.io) to provide the latest news abut aBrain for you<br />editor:<br />+ design bugfix<br />monitor / log:<br />+ merge both<br />+ each script has now it's own log<br />+ you can always view the last 5 executed scripts (until you stop aBrain)"
   },
   {
     "mTitle": "Beta 2 - ",
     "mDate": "12.06.2016",
-    "mText": "script:<br />
-+ add WebSockets<br />
-+ add Gyroscope<br />
-<br />
-app:<br />
-+ ask for permissions on Android 6.0+"
+    "mText": "script:<br />+ add WebSockets<br />+ add Gyroscope<br /><br />app:<br />+ ask for permissions on Android 6.0+"
   },
   {
     "mTitle": "Beta 1 - First public release",
