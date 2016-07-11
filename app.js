@@ -33,6 +33,18 @@ app.config(['$mdThemingProvider', '$routeProvider', '$locationProvider',
             controller: 'ApiController',
             controllerAs: 'ctrl'
         })
+        .when('/start', 
+        {
+            templateUrl: 'start/index.html',
+            controller: 'StartController',
+            controllerAs: 'ctrl'
+        })
+        .when('/start/app', 
+        {
+            templateUrl: 'start/index.html',
+            controller: 'StartController',
+            controllerAs: 'ctrl'
+        })
         .otherwise({redirectTo: '/blog'});
   }
 ]);

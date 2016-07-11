@@ -5,13 +5,17 @@ class ApiController {
     let self = this;
     this.$scope = $scope;
     this.$http = $http;
+
+    this.loadApi();
   }
 
   loadApi() {
     var self = this;
-    this.$http.get('/api/content.json', {})
+    this.$http.get('api/content.json', {})
       .then((response)=>{
-        self.$scope.blog = response.data;
+        self.$scope.script = response.data.script;
+        
+        self.$scope.android = response.data.android;
       }, (response)=>{
         
       }, (response)=>{
@@ -20,4 +24,4 @@ class ApiController {
   }
 }
 
-app.controller('BlogController', ['$scope', '$http', ApiController ]);
+app.controller('ApiController', ['$scope', '$http', ApiController ]);

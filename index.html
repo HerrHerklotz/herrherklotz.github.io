@@ -18,21 +18,38 @@
   <body> 
     <div flex layout="row" ng-controller="AppController as appCtrl" layout-fill>
       <md-sidenav ng-if="desktop" class="site-sidenav md-sidenav-left" layout="column" md-component-id="sidenav" md-is-locked-open="$mdMedia('gt-sm')">
-        <md-toolbar>
+        <md-toolbar class="md-tall md-primary">
         </md-toolbar>
-        <md-content md-scroll-y>
+        <md-content>
+          <md-list>
+            <md-list-item ng-click="appCtrl.setPage('blog')">
+              <md-icon class="material-icons">book</md-icon>
+              <p>blog</p>
+            </md-list-item>
+            <md-list-item ng-click="appCtrl.setPage('start')" ng-disabled="true">
+              <md-icon class="material-icons">school</md-icon>
+              <p>getting started</p>
+            </md-list-item>
+            <md-list-item ng-click="appCtrl.setPage('api')">
+              <md-icon class="material-icons">create</md-icon>
+              <p>api</p>
+            </md-list-item>
+          </md-list>
         </md-content>
       </md-sidenav>
       <div layout="column" flex>
         <md-toolbar ng-if="desktop" >
           <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" ng-click="appCtrl.toggleSidenav()" hide-gt-sm>
+              <md-icon class="material-icons">menu</md-icon>
+            </md-button>
             <h2>
               Blog
             </h2>
             <span flex></span>
           </div>
         </md-toolbar>
-        <md-content id="content" md-scroll-y layout-fill>
+        <md-content id="content" flex md-scroll-y>
           <ng-view id="page" layout-padding></ng-view>
         </md-content>
       </div>
@@ -47,6 +64,8 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.9/angular-material.min.js"></script>
   <script src="app.js"></script>
   <script src="controller.js"></script>
+  <script src="api/controller.js"></script>
   <script src="blog/controller.js"></script>
+  <script src="start/controller.js"></script>
 
 </html>

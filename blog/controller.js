@@ -11,7 +11,7 @@ class BlogController {
 
   loadBlog() {
     var self = this;
-    this.$http.get('/blog/content.json', {})
+    this.$http.get('blog/content.json', {})
       .then((response)=>{
         self.$scope.blog = response.data;
       }, (response)=>{

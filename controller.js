@@ -2,11 +2,13 @@
 
 class AppController {
   
-  constructor($document, $scope, $location) {
+  constructor($document, $scope, $location, $mdSidenav) {
     let self = this;
     this.$document = $document;
     this.$scope = $scope;
     this.$location = $location;
+    this.$mdSidenav = $mdSidenav;
+
     this.$scope.desktop = true;
     if ($location.path().endsWith('app'))
     {
@@ -16,13 +18,17 @@ class AppController {
 
   setPage(oName) {
     this.$location.url(oName);
+    this.closeSidenav();
   }
 
-  //toggleSidenav() {
-  //  console.log("toggle")
-  //  this.$mdSidenav('left').toggle();
-  //}
+  toggleSidenav() {
+    this.$mdSidenav('sidenav').toggle();
+  }
+
+  closeSidenav() {
+    this.$mdSidenav('sidenav').close();
+  }
 
 }
 
-app.controller('AppController', ['$document', '$scope', '$location', AppController]);
+app.controller('AppController', ['$document', '$scope', '$location', '$mdSidenav', AppController]);

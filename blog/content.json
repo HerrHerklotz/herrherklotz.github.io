@@ -1,5 +1,10 @@
 [
   {
+    "mTitle": "Beta 5 (in progress) - inter script communication & timing",
+    "mDate": "??.07.2016",
+    "mText": "script:<br />+ add script.getValue()<br />+ add script.setValue()<br />+ add script.deleteValue()<br />+ add script.getNano()"
+  },
+  {
     "mTitle": "Beta 4 - Light Sensor and Notification LED",
     "mDate": "05.07.2016",
     "mText": "script:<br />+ add Sensor \"Light\" (android.getLight())<br />+ add LED (android.getLED())"
