@@ -1,11 +1,13 @@
 "use strict";
 
 class BlogController {
-  constructor($scope, $http) {
+  constructor($rootScope, $scope, $http) {
     let self = this;
+    this.$rootScope = $rootScope;
     this.$scope = $scope;
     this.$http = $http;
 
+    this.$rootScope.mTitle = "BLOG"
     this.loadBlog();
   }
 
@@ -22,4 +24,4 @@ class BlogController {
   }
 }
 
-app.controller('BlogController', ['$scope', '$http', BlogController ]);
+app.controller('BlogController', ['$rootScope', '$scope', '$http', BlogController ]);

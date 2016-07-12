@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="herrherklotz">
   <head>
-    <title>HerrHerklotz</title>
+    <title>aBrain - HerrHerklotz</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -18,36 +18,79 @@
   <body> 
     <div flex layout="row" ng-controller="AppController as appCtrl" layout-fill>
       <md-sidenav ng-if="desktop" class="site-sidenav md-sidenav-left" layout="column" md-component-id="sidenav" md-is-locked-open="$mdMedia('gt-sm')">
-        <md-toolbar class="md-tall md-primary">
-        </md-toolbar>
-        <md-content>
+      <md-toolbar style="background-color:rgb(71,20,138);">
+        <div layout="row" layout-padding layout-align="center end">
+          <svg id="logo" flex="50"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:cc="http://creativecommons.org/ns#"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      id="svg"
+      viewBox="0 0 512.00001 512.00001">
+        <defs id="defs4" />
+        <metadata id="metadata7">
+          <rdf:RDF>
+            <cc:Work
+              rdf:about="">
+              <dc:format>image/svg+xml</dc:format>
+              <dc:type
+                rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+              <dc:title></dc:title>
+            </cc:Work>
+          </rdf:RDF>
+        </metadata>
+        <g transform="translate(0,-540.36216)" id="layer1">
+          <g transform="matrix(0.93530273,0,0,0.93530273,17.862815,35.379058)" id="g4727">
+            <path class="path"
+              fill="none"
+              stroke="#FFFFFF"
+              stroke-linecap="butt";
+              id="path4160"
+              d="m 224.08639,890.11109 199.91296,0 82.64745,-111.21677 -49.73253,-120.05676 -32.32915,13.39045 C 415.7848,661.56169 406.00233,651.74623 395.3666,642.90895 l 13.36172,-32.25734 -120.04834,-49.72689 -13.35351,32.23681 c -13.79413,-1.33723 -27.68368,-1.37416 -41.48456,-0.10875 l -13.30839,-32.12806 -120.04834,49.72689 13.39046,32.32915 c -10.66632,8.80032 -20.481793,18.5828 -29.319073,29.21853 L 52.299227,658.83756 2.5723366,778.8859 34.809147,792.23942 c -1.33723,13.79413 -1.37416,27.68368 -0.10875,41.48457 l -32.1280604,13.30838 49.7330504,120.04527 10e-6,99.24146 110.453833,0 z"
+              style="stroke-width:42;
+                     stroke-linecap:round;
+                     stroke-linejoin:round;
+                     stroke-opacity:1">
+              </path>
+          </g>
+        </g>
+      </svg>
+      <span class="md-display-3" style="color:#FFF">aBrain</span>
+      </div>
+      </md-toolbar>
+      <md-content layout-padding>
           <md-list>
             <md-list-item ng-click="appCtrl.setPage('blog')">
-              <md-icon class="material-icons">book</md-icon>
-              <p>blog</p>
+              <md-icon class="material-icons md-light">book</md-icon>
+              <p>BLOG</p>
             </md-list-item>
+            <md-divider></md-divider>
             <md-list-item ng-click="appCtrl.setPage('start')" ng-disabled="true">
-              <md-icon class="material-icons">school</md-icon>
-              <p>getting started</p>
+              <md-icon class="material-icons md-light">school</md-icon>
+              <p>GUIDE</p>
             </md-list-item>
+            <md-divider></md-divider>
             <md-list-item ng-click="appCtrl.setPage('api')">
-              <md-icon class="material-icons">create</md-icon>
-              <p>api</p>
+              <md-icon class="material-icons md-light">create</md-icon>
+              <p>API</p>
             </md-list-item>
           </md-list>
         </md-content>
       </md-sidenav>
       <div layout="column" flex>
-        <md-toolbar ng-if="desktop" >
-          <div class="md-toolbar-tools">
+        <md-toolbar ng-if="desktop" style="background-color:#FFF;color:#000;">
+          <md-whiteframe class="md-toolbar-tools md-whiteframe-1dp">
+          <!--<div class="md-toolbar-tools">-->
             <md-button class="md-icon-button" ng-click="appCtrl.toggleSidenav()" hide-gt-sm>
-              <md-icon class="material-icons">menu</md-icon>
+              <md-icon class="material-icons md-dark">menu</md-icon>
             </md-button>
-            <h2>
-              Blog
-            </h2>
+            <span class="md-header">aBrain >&nbsp;</span>
+            <span class="md-header" ng-bind="mTitle">
+            </span>
             <span flex></span>
-          </div>
+          <!--</div>--></md-whiteframe>
         </md-toolbar>
         <md-content id="content" flex md-scroll-y>
           <ng-view id="page" layout-padding></ng-view>

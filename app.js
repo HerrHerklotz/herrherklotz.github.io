@@ -9,18 +9,6 @@ app.config(['$mdThemingProvider', '$routeProvider', '$locationProvider',
     .accentPalette('blue');
 
     $routeProvider
-        .when('/blog', 
-        {
-            templateUrl: 'blog/index.html',
-            controller: 'BlogController',
-            controllerAs: 'ctrl'
-        })
-        .when('/blog/app', 
-        {
-            templateUrl: 'blog/index.html',
-            controller: 'BlogController',
-            controllerAs: 'ctrl'
-        })
         .when('/api', 
         {
             templateUrl: 'api/index.html',
@@ -31,6 +19,18 @@ app.config(['$mdThemingProvider', '$routeProvider', '$locationProvider',
         {
             templateUrl: 'api/index.html',
             controller: 'ApiController',
+            controllerAs: 'ctrl'
+        })
+        .when('/blog', 
+        {
+            templateUrl: 'blog/index.html',
+            controller: 'BlogController',
+            controllerAs: 'ctrl'
+        })
+        .when('/blog/app', 
+        {
+            templateUrl: 'blog/index.html',
+            controller: 'BlogController',
             controllerAs: 'ctrl'
         })
         .when('/start', 

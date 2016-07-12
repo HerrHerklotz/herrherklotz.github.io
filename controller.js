@@ -2,7 +2,7 @@
 
 class AppController {
   
-  constructor($document, $scope, $location, $mdSidenav) {
+  constructor($document, $rootScope, $scope, $location, $mdSidenav) {
     let self = this;
     this.$document = $document;
     this.$scope = $scope;
@@ -31,4 +31,4 @@ class AppController {
 
 }
 
-app.controller('AppController', ['$document', '$scope', '$location', '$mdSidenav', AppController]);
+app.controller('AppController', ['$document', '$rootScope', '$scope', '$location', '$mdSidenav', AppController]);

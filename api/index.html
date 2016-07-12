@@ -1,31 +1,47 @@
 <div>
-<md-card layout-padding>
+<md-card class="md-primary">
   <md-card-title>
     <md-card-title-text>
-      <span class="md-headline">android</span>
+      <span class="md-headline">choose a object to view</span>
     </md-card-title-text>
   </md-card-title>
   <md-card-content>
-    <md-list>
-      <md-list-item ng-repeat="item in android track by $index">
-        <p ng-bind="item.name">
-      </md-list-item>
-    </md-list>
+    <md-input-container class="md-block" flex-gt-sm>
+      <md-select ng-model="mSelected.mName" ng-change="ctrl.loadApi()">
+        <md-option ng-repeat="item in mObjects" value="{{item}}">
+          {{item}}
+        </md-option>
+      </md-select>
+    </md-input-container>
   </md-card-content>
 </md-card>
 </div>
 <div>
 
-<md-card layout-padding>
+<md-card>
   <md-card-title>
     <md-card-title-text>
-      <span class="md-headline">script</span>
+      <span class="md-headline" ng-bind="mSelected.mName"></span>
     </md-card-title-text>
   </md-card-title>
   <md-card-content>
     <md-list>
-      <md-list-item ng-repeat="item in script track by $index">
-        <p ng-bind="item.name">
+      <md-list-item layout-padding ng-repeat="item in mSelected.mItems track by $index">
+        <div layout="column">
+        <span class="md-body-2" ng-bind="item.name"></span>
+        <span class="md-caption">
+          <span ng-bind="item.return"></span>
+          <span ng-bind="item.name"></span>
+          (
+          <span ng-repeat=" parameter in item.parameters">
+            <span ng-bind="parameter.type"></span>
+            <span ng-bind="parameter.name"></span>
+            <span ng-if="!$last">,</span>
+          </span>
+          )
+        </span>
+        <span ng-bind="item.desc"></span>
+        </div>
       </md-list-item>
     </md-list>
   </md-card-content>

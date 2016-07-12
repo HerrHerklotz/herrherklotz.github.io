@@ -1,19 +1,25 @@
 "use strict";
 
 class ApiController {
-  constructor($scope, $http) {
+  constructor($rootScope, $scope, $http) {
     let self = this;
+    this.$rootScope = $rootScope;
+    
     this.$scope = $scope;
     this.$http = $http;
+
+    this.$rootScope.mTitle = "API";
+    this.$scope.mObjects = ['android', 'script'];
+    this.$scope.mSelected = { 'mName': 'android'};
 
     this.loadApi();
   }
 
   loadApi() {
     var self = this;
-    this.$http.get('api/content.json', {})
+    self.$http.get('api/' + self.$scope.mSelected.mName + '.json', {})
       .then((response)=>{
-        self.$scope.script = response.data.script;
+        self.$scope.mSelected.mItems = response.data;
         
         self.$scope.android = response.data.android;
       }, (response)=>{
@@ -24,4 +30,4 @@ class ApiController {
   }
 }
 
-app.controller('ApiController', ['$scope', '$http', ApiController ]);
+app.controller('ApiController', ['$rootScope', '$scope', '$http', ApiController ]);

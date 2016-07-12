@@ -1,0 +1,56 @@
+[
+  {
+    "name": "log",
+    "return": "void",
+    "parameters": 
+    [
+      {
+        "type": "string",
+        "name": "message",
+        "desc": "..."
+      }
+    ],
+  "desc": "Add the message to log."
+  },
+  {
+    "name": "getNano",
+    "return": "int",
+    "parameters": [
+      {
+        "type": "void",
+        "name": "",
+        "desc": ""
+      }
+    ],
+  "desc": "Returns the actually time [ns] as single integer."
+  },
+  {
+    "name": "sleep",
+    "return": "void",
+    "parameters": [
+      {
+        "type": "int",
+        "name": "time",
+        "desc": "Time to sleep in [ms]."
+      }
+    ],
+  "desc": "Stopp the script for <TIME> milliseconds."
+  },
+  {
+    "name": "setValue",
+    "return": "void",
+    "parameters": [
+      {
+        "type": "string",
+        "name": "name",
+        "desc": "The unique identifcator to access the value."
+      },
+      {
+        "type": "[int|float|string]",
+        "name": "value",
+        "desc": "The value to store."
+      }
+    ],
+  "desc": "Set a value, which could be access from other scripts."
+  }
+]
