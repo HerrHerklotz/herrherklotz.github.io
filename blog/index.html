@@ -1,15 +1,13 @@
-<div ng-repeat="item in blog track by $index">
-<md-card>
-  <md-card-title>
+<md-card ng-repeat="item in blog track by $index">
+  <md-card-title style="padding:8px;">
     <md-card-title-text>
-      <span class="md-headline">{{item.mTitle}}</span>
-      <span class="md-caption">{{item.mDate}}</span>
+      <span class="md-title">{{item.mTitle}}</span>
+      <small class="md-caption" ng-bind="item.mDate"></small>
     </md-card-title-text>
   </md-card-title>
   <md-card-content layout-padding>
-    <div>
+    <div layout="column">
     <span ng-bind-html="item.mText"></span>
     </div>
   </md-card-content>
 </md-card>
-</div>
