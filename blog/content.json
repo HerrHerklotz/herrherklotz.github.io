@@ -2,30 +2,26 @@
   {
     "mTitle": "Changelog - Beta 5 (in progress)",
     "mDate": "??.07.2016",
-    "mLink": "/io/blog/content/201607999.html"
+    "mLink": "blog/content/201607999.html"
   },
   {
     "mTitle": "Changelog - Beta 4",
     "mDate": "05.07.2016",
-    "mLink": "/io/blog/content/201607050.html",
-    "mText": "script:<br />+ add Sensor \"Light\" (android.getLight())<br />+ add LED (android.getLED())"
+    "mLink": "blog/content/201607050.html"
   },
   {
     "mTitle": "Changelog - Beta 3",
     "mDate": "30.06.2016",
-    "mLink": "/io/blog/content/201606300.html",
-    "mText": "script:<br />+ add Sensor \"Ambient Temperature\"<br />app:<br />+ direct show my blog (herrherklotz.github.io) to provide the latest news abut aBrain for you<br />editor:<br />+ design bugfix<br />monitor / log:<br />+ merge both<br />+ each script has now it's own log<br />+ you can always view the last 5 executed scripts (until you stop aBrain)"
+    "mLink": "blog/content/201606300.html"
   },
   {
     "mTitle": "Changelog - Beta 2",
     "mDate": "12.06.2016",
-    "mLink": "/io/blog/content/201606120.html",
-    "mText": "script:<br />+ add WebSockets<br />+ add Gyroscope<br /><br />app:<br />+ ask for permissions on Android 6.0+"
+    "mLink": "blog/content/201606120.html"
   },
   {
     "mTitle": "First public release",
     "mDate": "09.06.2016",
-    "mLink": "/io/blog/content/201606090.html",
-    "mText": "Initial release including access to Accelerometer and some basic functions (log & sleep)"
+    "mLink": "blog/content/201606090.html"
   }
 ]
