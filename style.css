@@ -51,6 +51,11 @@ md-sidenav
       z-index: 0;
     }
 }
+
+md-card md-divider
+{
+  margin:8px;
+}
 /*#logo {
   background-color: #673AB7;
   color: #fff;
