@@ -9,43 +9,25 @@ app.config(['$mdThemingProvider', '$routeProvider', '$locationProvider',
     .accentPalette('blue');
 
     $routeProvider
-        .when('/api', 
+        .when('/:mode/api', 
         {
             templateUrl: 'api/index.html',
             controller: 'ApiController',
             controllerAs: 'ctrl'
         })
-        .when('/api/app', 
-        {
-            templateUrl: 'api/index.html',
-            controller: 'ApiController',
-            controllerAs: 'ctrl'
-        })
-        .when('/blog', 
+        .when('/:mode/blog', 
         {
             templateUrl: 'blog/index.html',
             controller: 'BlogController',
             controllerAs: 'ctrl'
         })
-        .when('/blog/app', 
+        .when('/:mode/guide', 
         {
-            templateUrl: 'blog/index.html',
-            controller: 'BlogController',
+            templateUrl: 'guide/index.html',
+            controller: 'GuideController',
             controllerAs: 'ctrl'
         })
-        .when('/start', 
-        {
-            templateUrl: 'start/index.html',
-            controller: 'StartController',
-            controllerAs: 'ctrl'
-        })
-        .when('/start/app', 
-        {
-            templateUrl: 'start/index.html',
-            controller: 'StartController',
-            controllerAs: 'ctrl'
-        })
-        .otherwise({redirectTo: '/blog'});
+        .otherwise({redirectTo: '/desktop/blog'});
   }
 ]);
 

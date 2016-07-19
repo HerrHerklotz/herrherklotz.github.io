@@ -1,17 +1,24 @@
 "use strict";
 
 class BlogController {
-  constructor($rootScope, $scope, $http) {
+  constructor($rootScope, $scope, $routeParams, $http) 
+  {
+    $rootScope.mTitle = "BLOG";
+    
+    if($routeParams.mode == 'app')
+      $rootScope.desktop = false;
+    else
+      $rootScope.desktop = true;
+
     let self = this;
-    this.$rootScope = $rootScope;
     this.$scope = $scope;
     this.$http = $http;
 
-    this.$rootScope.mTitle = "BLOG"
     this.loadBlog();
   }
 
-  loadBlog() {
+  loadBlog()
+  {
     var self = this;
     this.$http.get('blog/content.json', {})
       .then((response)=>{
@@ -24,4 +31,4 @@ class BlogController {
   }
 }
 
-app.controller('BlogController', ['$rootScope', '$scope', '$http', BlogController ]);
+app.controller('BlogController', ['$rootScope', '$scope', '$routeParams', '$http', BlogController ]);

@@ -1,4 +1,4 @@
-<md-card class="md-primary">
+<!--<md-card class="md-primary">
   <md-card-title>
     <md-card-title-text>
       <span class="md-title">choose a object to view</span>
@@ -13,14 +13,22 @@
       </md-select>
     </md-input-container>
   </md-card-content>
-</md-card>
+</md-card>-->
 <md-card>
   <md-card-title>
     <md-card-title-text>
-      <span class="md-title" ng-bind="mSelected.mName"></span>
+      <!--<span class="md-title" ng-bind="mSelected.mName"></span>-->
+      <md-input-container class="md-block" style="margin:0px;"flex-gt-sm>
+      <md-select ng-model="mSelected" ng-change="ctrl.loadApi()">
+        <md-option ng-repeat="item in mObjects" value="{{item}}">
+          {{item}}
+        </md-option>
+      </md-select>
+    </md-input-container>
     </md-card-title-text>
   </md-card-title>
-  <md-card-content>
+  <md-card-content layout-padding>
+    <div ng-include="mApiLink"></div><!--
     <md-list>
       <md-list-item layout-padding ng-repeat="item in mSelected.mItems track by $index">
         <div layout="column">
@@ -39,6 +47,6 @@
         <span ng-bind="item.desc"></span>
         </div>
       </md-list-item>
-    </md-list>
+    </md-list>-->
   </md-card-content>
 </md-card>

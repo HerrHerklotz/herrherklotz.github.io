@@ -41,6 +41,11 @@ md-card md-card-title
   padding:8px;
 }
 
+md-card md-divider
+{
+  margin:8px;
+}
+
 md-sidenav
 {
   width:280px;
@@ -50,11 +55,6 @@ md-sidenav
       /*background-color:rgb(250,250,250);*/
       z-index: 0;
     }
-}
-
-md-card md-divider
-{
-  margin:8px;
 }
 /*#logo {
   background-color: #673AB7;
