@@ -18,6 +18,10 @@ body
   min-width: 320px;
 }
 
+.splash {
+  display: none;
+}
+
 [ng-cloak].splash 
 {
   display: block !important;
