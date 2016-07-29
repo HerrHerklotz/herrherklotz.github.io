@@ -18,6 +18,32 @@ body
   min-width: 320px;
 }
 
+[ng-cloak].splash 
+{
+  display: block !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) 
+}
+
+.splash svg 
+{
+  width:120px;
+  height:120px;
+}
+
+.splash p 
+{
+  text-align: center;
+  margin: 0px;
+  margin-top: 12px;
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
+
 div #content 
 {
   background-color: #fff;/*rgb(250,250,250);*/
