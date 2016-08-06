@@ -1,23 +1,6 @@
-<!--<md-card class="md-primary">
+<!--<md-card>
   <md-card-title>
     <md-card-title-text>
-      <span class="md-title">choose a object to view</span>
-    </md-card-title-text>
-  </md-card-title>
-  <md-card-content>
-    <md-input-container class="md-block" flex-gt-sm>
-      <md-select ng-model="mSelected.mName" ng-change="ctrl.loadApi()">
-        <md-option ng-repeat="item in mObjects" value="{{item}}">
-          {{item}}
-        </md-option>
-      </md-select>
-    </md-input-container>
-  </md-card-content>
-</md-card>-->
-<md-card>
-  <md-card-title>
-    <md-card-title-text>
-      <!--<span class="md-title" ng-bind="mSelected.mName"></span>-->
       <md-input-container class="md-block" style="margin:0px;"flex-gt-sm>
       <md-select ng-model="mSelected" ng-change="ctrl.loadApi()">
         <md-option ng-repeat="item in mObjects" value="{{item}}">
@@ -28,25 +11,108 @@
     </md-card-title-text>
   </md-card-title>
   <md-card-content layout-padding>
-    <div ng-include="mApiLink"></div><!--
-    <md-list>
-      <md-list-item layout-padding ng-repeat="item in mSelected.mItems track by $index">
-        <div layout="column">
-        <span class="md-body-2" ng-bind="item.name"></span>
-        <span class="md-caption">
-          <span ng-bind="item.return"></span>
-          <span ng-bind="item.name"></span>
-          (
-          <span ng-repeat=" parameter in item.parameters">
-            <span ng-bind="parameter.type"></span>
-            <span ng-bind="parameter.name"></span>
-            <span ng-if="!$last">,</span>
-          </span>
-          )
-        </span>
-        <span ng-bind="item.desc"></span>
-        </div>
-      </md-list-item>
-    </md-list>-->
+    <div ng-include="mApiLink"></div>
+  </md-card-content>
+</md-card>-->
+
+<md-card>
+  <md-card-title>
+    <md-card-title-text>
+      Basic functions
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content layout-padding>
+    <span class="md-body-2">$log({string})</span><br />
+    <p class="md-body-1">
+      Adds a {string} to the log.<br />
+    </p>
+    <md-divider></md-divider>
+    <span class="md-body-2">$sleep({int})</span><br />
+    <p class="md-body-1">
+      Blocks the calling script for {int} milliseconds.<br />
+    </p>
+    <md-divider></md-divider>
+    <span class="md-body-2">{int} = $getRunFlag()</span><br />
+    <p class="md-body-1">
+      Returns 1 until you press the stop button in the monitor application.<br />
+    </p>
+    <md-divider></md-divider>
+    <span class="md-body-2">$use({string})</span><br />
+    <p class="md-body-1">
+      This method is required by some hardware features.<br />
+    </p>
+    <md-divider></md-divider>
+    <span class="md-body-2">$open({string}, {string})</span><br />
+    <p class="md-body-1">
+      This method will open a communication channel.<br /><br />
+      Example:<br />
+      To enable the websocket endpoint {IP}:50505/ws/echo you need to call $open("websocket", "echo");
+    </p>
+  </md-card-content>
+</md-card>
+
+<md-card>
+  <md-card-title>
+    <md-card-title-text>
+      <span>Hardware</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content layout-padding>
+    <span class="md-body-2">{object} = $accelerometer.read()</span><br />
+    <span class="md-caption">Before using call $use("accelerometer")</span><br />
+    <p class="md-body-1">Returns a <i>{object}</i> which contains the device acceleration.<br />
+    <br />
+    <i>{object}</i>.x [m/s^2]<br />
+    <i>{object}</i>.y [m/s^2]<br />
+    <i>{object}</i>.z [m/s^2]<br />
+    </p>
+    <md-divider></md-divider>
+    <span class="md-body-2">{object} = $gyroscope.read()</span><br />
+    <span class="md-caption">Before using call $use("gyroscope")</span><br />
+    <p class="md-body-1">Returns a <i>{object}</i> which contains the rotation per second.<br />
+    <br />
+    <i>{object}</i>.x [rad/s]<br />
+    <i>{object}</i>.y [rad/s]<br />
+    <i>{object}</i>.z [rad/s]<br />
+    </p>
+    <md-divider></md-divider>
+    <span class="md-body-2">{object} = $ambienteTemperature.read()</span><br />
+    <span class="md-caption">Before using call $use("ambienteTemperature")</span><br />
+    <p class="md-body-1">Returns a <i>{object}</i> which contains the ambient temperature.<br />
+    <br />
+    <i>{object}</i> [°C]<br />
+    </p>
+    <md-divider></md-divider>
+    <span class="md-body-2">{object} = $light.read()</span><br />
+    <span class="md-caption">Before using call $use("light")</span><br />
+    <p class="md-body-1">Returns a <i>{object}</i> which contains the ambient light level and on some devices the color temperature.<br />
+    <br />
+    <i>{object}</i>.light [lx]<br />
+    <i>{object}</i>.color [k]<br />
+    </p>
+  </md-card-content>
+</md-card>
+
+<md-card>
+  <md-card-title>
+    <md-card-title-text>
+      Communication
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content layout-padding>
+    <span class="md-body-2">$websocket.waitForClient()</span><br />
+    <span class="md-caption">Before using call $open("websocket", "endpointName")</span><br />
+    <p class="md-body-1">This method will block the calling script until a client is connected.<br />
+    </p>
+    <md-divider></md-divider>
+    <span class="md-body-2">{string} = $websocket.read()</span><br />
+    <span class="md-caption">Before using call $open("websocket", "endpointName")</span><br />
+    <p class="md-body-1">This method will block the calling script until a message was received.<br />
+    </p>
+    <md-divider></md-divider>
+    <span class="md-body-2">$websocket.write({string})</span><br />
+    <span class="md-caption">Before using call $open("websocket", "endpointName")</span><br />
+    <p class="md-body-1">Sends a message to the connected client.<br />
+    </p>
   </md-card-content>
 </md-card>
