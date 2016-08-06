@@ -48,6 +48,21 @@
       Example:<br />
       To enable the websocket endpoint {IP}:50505/ws/echo you need to call $open("websocket", "echo");
     </p>
+    <md-divider></md-divider>
+    <span class="md-body-2">{int}|{string} = $value.get({string})</span><br />
+    <p class="md-body-1">
+      Returns the corresponding global variable.
+    </p>
+    <md-divider></md-divider>
+    <span class="md-body-2">$value.set({string}, {int}|{string})</span><br />
+    <p class="md-body-1">
+      Add/set a global (can be access from any running script) object with a {string} based identificator.
+    </p>
+    <md-divider></md-divider>
+    <span class="md-body-2">$value.delete({string})</span><br />
+    <p class="md-body-1">
+      Deletes the corresponding global variable.
+    </p>
   </md-card-content>
 </md-card>
 
