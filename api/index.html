@@ -32,11 +32,6 @@
       Blocks the calling script for {int} milliseconds.<br />
     </p>
     <md-divider></md-divider>
-    <span class="md-body-2">{int} = $getRunFlag()</span><br />
-    <p class="md-body-1">
-      Returns 1 until you press the stop button in the monitor application.<br />
-    </p>
-    <md-divider></md-divider>
     <span class="md-body-2">$use({string})</span><br />
     <p class="md-body-1">
       This method is required by some hardware features.<br />
@@ -45,8 +40,9 @@
     <span class="md-body-2">$open({string}, {string})</span><br />
     <p class="md-body-1">
       This method will open a communication channel.<br /><br />
-      Example:<br />
-      To enable the websocket endpoint {IP}:50505/ws/echo you need to call $open("websocket", "echo");
+      Examples:<br />
+      WebSocket: {IP}:50505/ws/echo <=> $open("websocket", "echo");<br />
+      Bluetooth: First pair the device and then you can connect through mac or device name <=> $open("bluetooth", "mac" || "name");
     </p>
     <md-divider></md-divider>
     <span class="md-body-2">{int}|{string} = $value.get({string})</span><br />
@@ -115,6 +111,16 @@
     </md-card-title-text>
   </md-card-title>
   <md-card-content layout-padding>
+    <span class="md-body-2">{string} = $bluetooth.read()</span><br />
+    <span class="md-caption">* see $open("bluetooth", {string})</span><br />
+    <p class="md-body-1">Waits until a message appears and return the received message as a {string}.<br />
+    </p>
+    <md-divider></md-divider>
+    <span class="md-body-2">$bluetooth.write({string})</span><br />
+    <span class="md-caption">* see $open("bluetooth", {string})</span><br />
+    <p class="md-body-1">Sends the {string} to the target device.<br />
+    </p>
+    <md-divider></md-divider>
     <span class="md-body-2">$websocket.waitForClient()</span><br />
     <span class="md-caption">Before using call $open("websocket", "endpointName")</span><br />
     <p class="md-body-1">This method will block the calling script until a client is connected.<br />
