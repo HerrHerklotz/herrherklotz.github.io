@@ -75,14 +75,11 @@
       <div layout="row" flex>
         <md-sidenav ng-if="desktop" class="site-sidenav md-sidenav-left" layout="column" md-component-id="sidenav" md-is-locked-open="$mdMedia('gt-sm')">
             <md-list>
-              <md-list-item ng-click="appCtrl.setPage('blog')" ng-if="mTitle == 'BLOG'">
-                <md-icon class="material-icons md-primary">book</md-icon>
-                <md-icon class="material-icons"  ng-if="mTitle != 'BLOG'">book</md-icon>
-                <p style="color:rgb(103,58,183);">BLOG</p>
-              </md-list-item>
-              <md-list-item ng-click="appCtrl.setPage('blog')" ng-if="mTitle != 'BLOG'">
-                <md-icon class="material-icons">book</md-icon>
-                <p>BLOG</p>
+              <md-list-item ng-click="appCtrl.setPage('blog')">
+                <md-icon ng-if="mTitle == 'BLOG'" class="material-icons md-primary">book</md-icon>
+                <md-icon ng-if="mTitle != 'BLOG'" class="material-icons">book</md-icon>
+                <p ng-if="mTitle == 'BLOG'" style="color:rgb(103,58,183);">BLOG</p>
+                <p ng-if="mTitle != 'BLOG'">BLOG</p>
               </md-list-item>
               <md-list-item ng-click="appCtrl.setPage('guide')">
                 <md-icon ng-if="mTitle == 'GUIDE'" class="material-icons md-primary">school</md-icon>
@@ -90,13 +87,11 @@
                 <p ng-if="mTitle == 'GUIDE'" style="color:rgb(103,58,183);">GUIDE</p>
                 <p ng-if="mTitle != 'GUIDE'" >GUIDE</p>
               </md-list-item>
-              <md-list-item ng-click="appCtrl.setPage('api')"  ng-if="mTitle == 'API'">
-                <md-icon class="material-icons md-primary">create</md-icon>
-                <p style="color:rgb(103,58,183);">API</p>
-              </md-list-item>
-              <md-list-item ng-click="appCtrl.setPage('api')"  ng-if="mTitle != 'API'">
-                <md-icon class="material-icons">create</md-icon>
-                <p>API</p>
+              <md-list-item ng-click="appCtrl.setPage('api')">
+                <md-icon ng-if="mTitle == 'API'" class="material-icons md-primary">create</md-icon>
+                <md-icon ng-if="mTitle != 'API'" class="material-icons">create</md-icon>
+                <p ng-if="mTitle == 'API'" style="color:rgb(103,58,183);">API</p>
+                <p ng-if="mTitle != 'API'">API</p>
               </md-list-item>
             </md-list>
         </md-sidenav>
