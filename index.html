@@ -84,12 +84,11 @@
                 <md-icon class="material-icons">book</md-icon>
                 <p>BLOG</p>
               </md-list-item>
-              <!--<md-divider></md-divider>-->
-              <md-list-item ng-click="appCtrl.setPage('start')" ng-disabled="true">
+              <md-list-item ng-click="appCtrl.setPage('guide')">
                 <md-icon class="material-icons">school</md-icon>
-                <p>GUIDE</p>
+                <p ng-if="mTitle == 'GUIDE'" style="color:rgb(103,58,183);">GUIDE</p>
+                <p ng-if="mTitle != 'GUIDE'" >GUIDE</p>
               </md-list-item>
-              <!--<md-divider></md-divider>-->
               <md-list-item ng-click="appCtrl.setPage('api')"  ng-if="mTitle == 'API'">
                 <md-icon class="material-icons md-primary">create</md-icon>
                 <p style="color:rgb(103,58,183);">API</p>
