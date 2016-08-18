@@ -54,7 +54,7 @@ div #content
   padding:8px;
 }
 
-md-card, div.subHead, p.guide 
+md-card, div.subHead, div.guide 
 {
   /*margin: 8px;*/
   width: 100%;
