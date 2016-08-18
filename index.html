@@ -85,7 +85,8 @@
                 <p>BLOG</p>
               </md-list-item>
               <md-list-item ng-click="appCtrl.setPage('guide')">
-                <md-icon class="material-icons">school</md-icon>
+                <md-icon ng-if="mTitle == 'GUIDE'" class="material-icons md-primary">school</md-icon>
+                <md-icon ng-if="mTitle != 'GUIDE'" class="material-icons">school</md-icon>
                 <p ng-if="mTitle == 'GUIDE'" style="color:rgb(103,58,183);">GUIDE</p>
                 <p ng-if="mTitle != 'GUIDE'" >GUIDE</p>
               </md-list-item>
