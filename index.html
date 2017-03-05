@@ -58,9 +58,8 @@
               <p ng-if="mTitle == 'make'" style="color:rgb(68,138,255);">Make</p>
               <p ng-if="mTitle != 'make'">Make</p>
             </md-list-item>
-            <md-list-item ng-click="app.setPage('projects/moin')" ng-disabled="true">
-              <md-icon ng-if="mTitle == 'moin'" class="material-icons md-accent">build</md-icon>
-              <md-icon ng-if="mTitle != 'moin'" class="material-icons">build</md-icon>
+            <md-list-item ng-href="https://play.google.com/store/apps/details?id=com.herrherklotz.moin">
+              <md-icon md-svg-src="img/moin.svg"></md-icon>
               <p ng-if="mTitle == 'moin'" style="color:rgb(68,138,255);">Moin</p>
               <p ng-if="mTitle != 'moin'">Moin</p>
             </md-list-item>
