@@ -9,25 +9,13 @@ app.config(['$mdThemingProvider', '$routeProvider', '$locationProvider',
     .accentPalette('blue');
 
     $routeProvider
-        .when('/:mode/api', 
-        {
-            templateUrl: 'api/index.html',
-            controller: 'ApiController',
-            controllerAs: 'ctrl'
-        })
-        .when('/:mode/blog', 
+        .when('/blog', 
         {
             templateUrl: 'blog/index.html',
             controller: 'BlogController',
             controllerAs: 'ctrl'
         })
-        .when('/:mode/guide', 
-        {
-            templateUrl: 'guide/index.html',
-            controller: 'GuideController',
-            controllerAs: 'ctrl'
-        })
-        .otherwise({redirectTo: '/desktop/blog'});
+        .otherwise({redirectTo: '/blog'});
   }
 ]);
 

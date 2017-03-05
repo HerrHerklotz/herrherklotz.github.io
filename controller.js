@@ -13,14 +13,6 @@ class AppController
     this.$location = $location;
     this.$mdSidenav = $mdSidenav;
 
-    
-
-    /*this.$scope.desktop = true;
-    if ($location.path().endsWith('app'))
-    {
-      this.$scope.desktop = false;
-    }*/
-
     this.$scope.linkAPI = {'text-color':'#F00'};
   }
 

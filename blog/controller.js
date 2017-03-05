@@ -3,6 +3,8 @@
 class BlogController {
   constructor($rootScope, $scope, $routeParams, $http) 
   {
+    var self = this;
+
     $rootScope.mTitle = "BLOG";
     
     if($routeParams.mode == 'app')
@@ -10,7 +12,6 @@ class BlogController {
     else
       $rootScope.desktop = true;
 
-    let self = this;
     this.$scope = $scope;
     this.$http = $http;
 
