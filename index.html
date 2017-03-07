@@ -63,9 +63,8 @@
               <p ng-if="mTitle == 'moin'" style="color:rgb(68,138,255);">Moin</p>
               <p ng-if="mTitle != 'moin'">Moin</p>
             </md-list-item>
-            <md-list-item ng-click="app.setPage('projects/vrest')" ng-disabled="true">
-              <md-icon ng-if="mTitle == 'vrest'" class="material-icons md-accent">build</md-icon>
-              <md-icon ng-if="mTitle != 'vrest'" class="material-icons">build</md-icon>
+            <md-list-item ng-href="https://play.google.com/store/apps/details?id=com.herrherklotz.vrest">
+              <md-icon md-svg-src="img/vrest.svg"></md-icon>
               <p ng-if="mTitle == 'vrest'" style="color:rgb(68,138,255);">Vitamin REST</p>
               <p ng-if="mTitle != 'vrest'">Vitamin REST</p>
             </md-list-item>
