@@ -8,4 +8,4 @@ class StartController {
   }
 }
 
-app.controller('StartController', ['$scope', '$http', StartController ]);
+app.controller('StartController', StartController);

@@ -1,36 +1,20 @@
-"use strict";
-
-class AppController 
-{
-  constructor($document, $rootScope, $scope, $location, $mdSidenav)
-  {
-    $rootScope.selectedPage = 'blog';
-
-    let self = this;
-    this.$document = $document;
-    this.$rootScope = $rootScope;
-    this.$scope = $scope;
-    this.$location = $location;
-    this.$mdSidenav = $mdSidenav;
-
-    this.$scope.linkAPI = {'text-color':'#F00'};
+function AppController($rootScope, $scope, $location, $mdSidenav) {
+  this.setPage = function setPage(oName) {
+    $location.url('desktop/' + oName);
+    closeSidenav();
   }
 
-  setPage(oName)
-  {
-    this.$location.url('desktop/' + oName);
-    this.closeSidenav();
+  this.toggleSidenav = function toggleSidenav() {
+    $mdSidenav('sidenav').toggle();
   }
 
-  toggleSidenav()
-  {
-    this.$mdSidenav('sidenav').toggle();
+  this.closeSidenav = function closeSidenav() {
+    $mdSidenav('sidenav').close();
   }
+  
+  $rootScope.selectedPage = 'blog';
 
-  closeSidenav()
-  {
-    this.$mdSidenav('sidenav').close();
-  }
+  $scope.linkAPI = {'text-color':'#F00'};
 }
 
-app.controller('AppController', ['$document', '$rootScope', '$scope', '$location', '$mdSidenav', AppController]);
+app.controller('AppController', AppController);

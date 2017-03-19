@@ -1,5 +1,3 @@
-"use strict";
-
 var app = angular.module('herrherklotz', ['ngMaterial', 'ngRoute', 'ngSanitize']);
 
 app.config(['$mdThemingProvider', '$routeProvider', '$locationProvider', 
@@ -18,4 +16,3 @@ app.config(['$mdThemingProvider', '$routeProvider', '$locationProvider',
         .otherwise({redirectTo: '/blog'});
   }
 ]);
-
