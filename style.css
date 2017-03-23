@@ -1,95 +1,83 @@
 /* Rules for sizing the icon. */
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
+i.i-18 { font-size: 18px; }
+i.i-24 { font-size: 24px; }
+i.i-36 { font-size: 36px; }
+i.i-48 { font-size: 48px; }
 
 /* Rules for using icons as black on a light background. */
-.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+i.i-dark { color: rgba(0, 0, 0, 0.54); }
+i.i-dark.i-inactive { color: rgba(0, 0, 0, 0.26); }
 
 /* Rules for using icons as white on a dark background. */
-.material-icons.md-light { color: rgba(255, 255, 255, 1); }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+i.i-light { color: rgba(255, 255, 255, 1); }
+i.i-light.i-inactive { color: rgba(255, 255, 255, 0.3); }
 
-body 
-{
-  background-color: #673AB7;
-  min-width: 320px;
+
+html, body {
+    margin:0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.splash {
-  display: none;
+header, footer {
+    background-color: rgba(0,0,0,0.4);
+    flex: 0 0 auto;
+    padding: 12px;
+    display:flex;
+    justify-content: center;
 }
 
-[ng-cloak].splash 
-{
-  display: block !important;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%) 
+.flex-container {
+    display: flex;
+    flex: 1; /* OR flex: 1 1 auto; will work for align-items */
+    
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+    align-items: stretch;
 }
 
-.splash svg 
-{
-  width:120px;
-  height:120px;
-}
+.flex-item {
+    display: flex;
+    flex: 1 0 240px;  /* -> min-height == 240px*/
+    max-height: 320px;
 
-.splash p 
-{
-  text-align: center;
-  margin: 0px;
-  margin-top: 12px;
-  color: #FFFFFF;
-  font-size: 24px;
-}
+    margin: 12px;
 
-
-div #content 
-{
-  background-color: #fff;/*rgb(250,250,250);*/
-  padding:8px;
+    border-radius: 3px;
+    font-size: .8em;
+    color: #9E9E9E;
+    background: white;
 }
+@media(min-width:768px) { /*768px*/
+    header, footer {
+        justify-content: flex-end;
+    }
 
-md-card, div.subHead, div.guide 
-{
-  /*margin: 8px;*/
-  width: 100%;
-  margin:auto;
-  margin-bottom: 8px; 
-  max-width: 640px;
-}
+    .flex-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items:  flex-end;
+    }
 
-md-card {
-  overflow: hidden; /* avoid overdrawing rounded corner */
-}
-
-md-card md-card-title
-{
-  font-weight: bold;
-  color: rgb(255,255,255);
-  background-color: #1E88E5;
-  padding:8px;
-}
-
-md-card md-divider
-{
-  margin:8px;
-}
-
-md-sidenav
-{
-  width:280px;
-}
-@media screen and (min-width: 960px) {
-    md-sidenav {
-      z-index: 0;
+    .flex-item {
+        flex: 1 0 auto; /* -> min-width == 0*/
+        margin:24px;
+        height: 240px;
+        max-width: 600px;
     }
 }
 
-.md-subheader {
-  background: #FFF;
+.bg {
+    background-image: url(/material-components-web-0.7.0/demos/images/1-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.4);
 }

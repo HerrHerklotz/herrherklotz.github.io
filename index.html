@@ -1,89 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="herrherklotz">
-  <head>
+<html>
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-
     <title>HerrHerklotz</title>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
-
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">
-    <link rel="stylesheet" href="style.css">
-  </head>
-
-  <body ng-cloak layout="column" ng-controller="AppController as app" flex layout-fill>
-    <md-toolbar>
-      <md-whiteframe class="md-toolbar-tools md-whiteframe-1dp">
-        <md-button class="md-icon-button" ng-click="app.toggleSidenav()" hide-gt-sm>
-          <md-icon class="material-icons">menu</md-icon>
-        </md-button>
-        <span class="md-header">HerrHerklotz</span>
-        <md-icon class="material-icons">keyboard_arrow_right</md-icon>
-        <span class="md-header" ng-bind="mTitle">
-        </span>
-        <span flex></span>
-      </md-whiteframe>
-    </md-toolbar>
-    <div layout="row" flex >
-      <md-sidenav class="site-sidenav md-sidenav-left" layout="column" md-component-id="sidenav" md-is-locked-open="$mdMedia('gt-sm')">
-          <md-list>
-            <md-subheader>General</md-subheader>
-            <md-list-item ng-click="app.setPage('blog')">
-              <md-icon ng-if="mTitle == 'BLOG'" class="material-icons md-accent">book</md-icon>
-              <md-icon ng-if="mTitle != 'BLOG'" class="material-icons">book</md-icon>
-              <p ng-if="mTitle == 'BLOG'" style="color:rgb(68,138,255);">BLOG</p>
-              <p ng-if="mTitle != 'BLOG'">BLOG</p>
-            </md-list-item>
-            <md-list-item ng-click="app.setPage('about')" ng-disabled="true">
-              <md-icon ng-if="mTitle == 'about'" class="material-icons md-accent">build</md-icon>
-              <md-icon ng-if="mTitle != 'about'" class="material-icons">build</md-icon>
-              <p ng-if="mTitle == 'about'" style="color:rgb(68,138,255);">About me</p>
-              <p ng-if="mTitle != 'about'">About me</p>
-            </md-list-item>
-            <md-subheader>Projects</md-subheader>
-            <md-list-item ng-click="app.setPage('projects/catalog')" ng-disabled="true">
-              <md-icon ng-if="mTitle == 'catalog'" class="material-icons md-accent">build</md-icon>
-              <md-icon ng-if="mTitle != 'catalog'" class="material-icons">build</md-icon>
-              <p ng-if="mTitle == 'catalog'" style="color:rgb(68,138,255);">Catalog</p>
-              <p ng-if="mTitle != 'catalog'">Catalog</p>
-            </md-list-item>
-            <md-list-item ng-click="app.setPage('projects/make')" ng-disabled="true">
-              <md-icon ng-if="mTitle == 'make'" class="material-icons md-accent">build</md-icon>
-              <md-icon ng-if="mTitle != 'make'" class="material-icons">build</md-icon>
-              <p ng-if="mTitle == 'make'" style="color:rgb(68,138,255);">Make</p>
-              <p ng-if="mTitle != 'make'">Make</p>
-            </md-list-item>
-            <md-list-item ng-href="https://play.google.com/store/apps/details?id=com.herrherklotz.moin">
-              <md-icon md-svg-src="img/moin.svg"></md-icon>
-              <p ng-if="mTitle == 'moin'" style="color:rgb(68,138,255);">Moin</p>
-              <p ng-if="mTitle != 'moin'">Moin</p>
-            </md-list-item>
-            <md-list-item ng-href="https://play.google.com/store/apps/details?id=com.herrherklotz.vrest">
-              <md-icon md-svg-src="img/vrest.svg"></md-icon>
-              <p ng-if="mTitle == 'vrest'" style="color:rgb(68,138,255);">Vitamin REST</p>
-              <p ng-if="mTitle != 'vrest'">Vitamin REST</p>
-            </md-list-item>
-          </md-list>
-      </md-sidenav>
-      <md-content id="content" flex md-scroll-y>
-        <ng-view id="page"></ng-view>
-      </md-content>
+    <script src="/lib/material-components-web/0.7.0/material-components-web.css.js" charset="utf-8"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-image:url(bg.jpg)">
+<header>
+    <!--<i class="mdc-icon-toggle material-icons mdc-ripple-upgraded mdc-ripple-upgraded--unbounded md-light md-48" role="button" aria-label="GitHub">favorite_border</i>
+    <a href="#">GitHub</a>-->
+    <i class="fa fa-github i-48 i-light" style="margin:0 12px 0 12px;"></i>
+    <i class="fa fa-twitter i-48 i-light" style="margin:0 12px 0 12px;"></i>
+    <i class="fa fa-google-plus i-48 i-light" style="margin:0 12px 0 12px;"></i>
+    <i class="fa fa-xing i-48 i-light" style="margin:0 12px 0 12px;"></i>
+</header>   
+<div class="flex-container">
+    <div class="flex-item bg mdc-card mdc-card--theme-dark" style="background-image: url(developer_c.jpg);">
+        <section class="mdc-card__primary">
+            <h1 class="mdc-card__title mdc-card__title--large">Developer</h1>
+            <h2 class="mdc-card__subtitle">about projects</h2>
+        </section>
     </div>
-  </body>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-animate.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-aria.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-sanitize.min.js"></script>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
-  <script src="app.js"></script>
-  <script src="controller.js"></script>
-  <script src="blog/controller.js"></script>
-
+    <div class="flex-item bg mdc-card mdc-card--theme-dark" style="background-image: url(traveller_c.jpg);">
+        <section class="mdc-card__primary">
+            <h1 class="mdc-card__title mdc-card__title--large">Traveller</h1>
+            <h2 class="mdc-card__subtitle">about locations</h2>
+        </section>
+    </div>
+    <div class="flex-item bg mdc-card mdc-card--theme-dark" style="background-image: url(berliner_c.jpg);">
+        <section class="mdc-card__primary">
+            <h1 class="mdc-card__title mdc-card__title--large">Berliner</h1>
+            <h2 class="mdc-card__subtitle">about me</h2>
+        </section>
+    </div>
+</div>
+<footer>
+</footer>
+<script src="/lib/material-components-web/0.7.0/material-components-web.js" charset="utf-8"></script>
+</body>
 </html>
